@@ -3,7 +3,10 @@ module.exports = {
       assert: {
         collect: {
           url:process.env.CI ? "https://lighthouse-ci-demo.vercel.app/" : "http://localhost:3000",
-          startServerCommand: process.env.CI ? undefined : "npm run dev"
+          startServerCommand: process.env.CI ? undefined : "npm run dev",
+          settings: {
+            emulatedFormFactor: 'desktop',
+          },
           },
         preset: "lighthouse:no-pwa",
         assertions: {
