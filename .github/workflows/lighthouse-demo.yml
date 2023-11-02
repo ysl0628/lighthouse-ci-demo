@@ -27,9 +27,9 @@ jobs:
           yarn
           npm run build
 
-    - name: Install Lighthouse CI
+    - name: run lighthouse-ci
       run: |
-          npm install -g @lhci/cli@0.3.x
+          npm install -g @lhci/cli
           lhci autorun --upload.target=temporary-public-storage || echo "LHCI failed!"
       env:
         LHCI_GITHUB_APP_TOKEN: ${{secrets.LHCI_GITHUB_APP_TOKEN}}

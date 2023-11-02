@@ -1,6 +1,9 @@
 {
     "ci": {
       "assert": {
+        "collect": {
+            "staticDistDir": "./out"
+          },
         "preset": "lighthouse:no-pwa",
         "assertions": {
           "categories:performance": [
