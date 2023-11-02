@@ -2,7 +2,8 @@ module.exports = {
     ci: {
       assert: {
         collect: {
-            url:"https://lighthouse-ci-demo.vercel.app/",
+          url:process.env.NODE_ENV === 'production' ? "https://lighthouse-ci-demo.vercel.app/" : "http://localhost:3000",
+          startServerCommand: process.env.NODE_ENV === 'production' ? undefined :"npm run dev"
           },
         preset: "lighthouse:no-pwa",
         assertions: {
