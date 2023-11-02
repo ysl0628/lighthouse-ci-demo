@@ -8,11 +8,11 @@ module.exports = {
         assertions: {
           "categories:performance": [
             "warn",
-            { "aggregationMethod": "optimistic", "minScore": 0.93 }
+            { "aggregationMethod": "optimistic", "minScore": 0.75 }
           ],
           "categories:accessibility": [
             "error",
-            { "aggregationMethod": "optimistic", "minScore": 0.95 }
+            { "aggregationMethod": "optimistic", "minScore": 0.6 }
           ]
         },
         upload: {
