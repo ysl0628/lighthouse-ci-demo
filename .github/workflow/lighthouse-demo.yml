@@ -23,7 +23,7 @@ jobs:
         node-version: 18.x
 
     - name: npm install, build
-        run: |
+      run: |
           yarn
           npm run build
 
